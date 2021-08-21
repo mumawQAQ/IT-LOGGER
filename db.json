@@ -1,0 +1,35 @@
+{
+  "logs": [
+    {
+      "id": 1,
+      "message": "Change network card 2",
+      "attention": true,
+      "tech": "Sam Smith",
+      "date": "2021-08-21T18:49:48.416Z"
+    },
+    {
+      "message": "hard drive fail",
+      "attention": true,
+      "tech": "John Doe",
+      "date": "2021-08-20T19:03:50.560Z",
+      "id": 2
+    }
+  ],
+  "techs": [
+    {
+      "firstName": "Jen",
+      "lastName": "Willams",
+      "id": 4
+    },
+    {
+      "firstName": "Greg",
+      "lastName": "Harris",
+      "id": 5
+    },
+    {
+      "firstName": "Jose",
+      "lastName": "Smith",
+      "id": 6
+    }
+  ]
+}

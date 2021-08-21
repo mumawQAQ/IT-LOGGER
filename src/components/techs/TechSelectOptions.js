@@ -1,0 +1,27 @@
+import React, { useEffect } from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { getTechs } from "../../actions/techAction";
+
+function TechSelectOptions(props) {
+  useEffect(() => {
+    props.getTechs();
+  }, []);
+  return (
+    !props.tech.loading &&
+    props.tech.techs !== null &&
+    props.tech.techs.map((tech) => (
+      <option key={tech.id} value={`${tech.firstName} ${tech.lastName}`}>
+        {tech.firstName} {tech.lastName}
+      </option>
+    ))
+  );
+}
+TechSelectOptions.propTypes = {
+  tech: PropTypes.object.isRequired,
+  getTechs: PropTypes.func.isRequired,
+};
+const mapStateToProps = (state) => ({
+  tech: state.tech,
+});
+export default connect(mapStateToProps, { getTechs })(TechSelectOptions);
